@@ -12,7 +12,7 @@ services:
     restart: unless-stopped
 
   oss_postgres:
-    image: "postgres:11"
+    image: "postgres:12"
     container_name: oss_postgres
     environment:
       POSTGRES_PASSWORD: postgres
