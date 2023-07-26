@@ -1,5 +1,5 @@
 {
-  "name": "docker_web_app",
+  "name": "oss_web_app",
   "version": "1.0.0",
   "description": "Node.js on Docker",
   "author": "dtndevopscandidate <devopscandidate@datasintesa.id>",
