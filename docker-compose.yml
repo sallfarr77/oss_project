@@ -1,0 +1,41 @@
+version: '3'
+services:
+  oss_express_app: # Custom container name for the Express app
+    build: ./express-app
+    container_name: oss_express_app
+    ports:
+      - "80:80"
+    depends_on:
+      - oss_postgres
+    networks:
+      - oss_network
+
+  oss_postgres: # Custom container name for PostgreSQL
+    image: "postgres:11"
+    container_name: oss_postgres
+    environment:
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "admin"
+      POSTGRES_DB: "admin-db"
+    volumes:
+      - "./data/postgresql:/var/lib/postgresql/data"
+    networks:
+      - oss_network
+
+  oss_nginx: # Custom container name for Nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile # Use the custom Dockerfile for Nginx
+    container_name: oss_nginx
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./nginx/nginx.conf:/etc/nginx/conf.d/default.conf"  # Use the default.conf file
+    depends_on:
+      - oss_express_app
+    networks:
+      - oss_network
+
+networks:
+  oss_network:
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Change to the 'user/oss_project' directory
+cd ~/oss_project
+
+# Run 'docker-compose up -d'
+docker compose up -d
+
+echo "start succes"
+
