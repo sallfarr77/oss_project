@@ -15,5 +15,6 @@ echo 'stop() { /opt/oss/bin/stop "$@"; }' >> ~/.bashrc
 # Apply the changes to the current shell session
 exec bash
 
+# Output
 echo "Setup completed. The 'start' command is now available from any directory."
 
