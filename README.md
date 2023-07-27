@@ -2,6 +2,8 @@
 
 ## automatic start
 
+### how to use?
+
 go to bin
 
 `cd ~/oss_project/bin/`
@@ -12,4 +14,4 @@ start the script
 
 now you can use:
 
-`$ start` and `$ stop`
+`$ start` , `$ stop` and `backup`
