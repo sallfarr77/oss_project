@@ -14,4 +14,4 @@ start the script
 
 now you can use:
 
-`$ start` , `$ stop` and `backup`
+`$ start` , `$ stop` and `$ backup` from any directories
