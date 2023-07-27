@@ -4,6 +4,8 @@
 
 ### how to use?
 
+You must add the curent user to docker grub `sudo usermod -aG docker $CURRENT_USER`
+
 go to bin
 
 `cd ~/oss_project/bin/`
